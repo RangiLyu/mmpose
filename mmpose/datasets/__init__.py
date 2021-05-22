@@ -1,4 +1,5 @@
 from .builder import build_dataloader, build_dataset
+from .dataset_info import DatasetInfo
 from .pipelines import Compose
 from .registry import DATASETS, PIPELINES
 from .samplers import DistributedSampler
@@ -30,5 +31,5 @@ __all__ = [
     'AnimalHorse10Dataset', 'AnimalMacaqueDataset', 'AnimalFlyDataset',
     'AnimalLocustDataset', 'AnimalZebraDataset', 'AnimalPoseDataset',
     'build_dataloader', 'build_dataset', 'Compose', 'DistributedSampler',
-    'DATASETS', 'PIPELINES'
+    'DATASETS', 'PIPELINES', 'DatasetInfo'
 ]
