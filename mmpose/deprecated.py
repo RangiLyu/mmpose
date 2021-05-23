@@ -9,7 +9,8 @@ class TopDownFreiHandDataset(TopDownBaseDataset):
     def __init__(self, *args, **kwargs):
         raise (ImportError(
             'TopDownFreiHandDataset has been renamed into FreiHandDataset,'
-            'check https://github.com/open-mmlab/mmpose/pull/202 for details'))
+            'check https://github.com/open-mmlab/mmpose/pull/202 for details.')
+               )
 
     def _get_db(self):
         return []
@@ -25,7 +26,8 @@ class TopDownOneHand10KDataset(TopDownBaseDataset):
     def __init__(self, *args, **kwargs):
         raise (ImportError(
             'TopDownOneHand10KDataset has been renamed into OneHand10KDataset,'
-            'check https://github.com/open-mmlab/mmpose/pull/202 for details'))
+            'check https://github.com/open-mmlab/mmpose/pull/202 for details.')
+               )
 
     def _get_db(self):
         return []
@@ -41,7 +43,8 @@ class TopDownPanopticDataset(TopDownBaseDataset):
     def __init__(self, *args, **kwargs):
         raise (ImportError(
             'TopDownPanopticDataset has been renamed into PanopticDataset,'
-            'check https://github.com/open-mmlab/mmpose/pull/202 for details'))
+            'check https://github.com/open-mmlab/mmpose/pull/202 for details.')
+               )
 
     def _get_db(self):
         return []
