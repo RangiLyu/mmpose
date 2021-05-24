@@ -89,10 +89,7 @@ def imshow_keypoints(img,
                         cv2.fillConvexPoly(img_copy, polygon,
                                            (int(r), int(g), int(b)))
                         transparency = max(
-                            0,
-                            min(
-                                1, 0.5 *
-                                (kpts[sk[0], 2] + kpts[sk[1], 2])))
+                            0, min(1, 0.5 * (kpts[sk[0], 2] + kpts[sk[1], 2])))
                         cv2.addWeighted(
                             img_copy,
                             transparency,
@@ -206,7 +203,7 @@ def imshow_keypoints_3d(
             pose_link_color = np.array(pose_link_color)
             assert len(pose_link_color) == len(skeleton)
             for link, link_color in zip(skeleton, pose_link_color):
-                link_indices = [_i - 1 for _i in link]
+                link_indices = [_i for _i in link]
                 xs_3d = kpts[link_indices, 0]
                 ys_3d = kpts[link_indices, 1]
                 zs_3d = kpts[link_indices, 2]

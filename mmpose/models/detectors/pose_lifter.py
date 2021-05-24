@@ -167,7 +167,7 @@ class PoseLifter(BasePose):
                     img=None,
                     skeleton=None,
                     pose_kpt_color=None,
-                    pose_limb_color=None,
+                    pose_link_color=None,
                     vis_height=400,
                     win_name='',
                     show=False,
@@ -188,8 +188,8 @@ class PoseLifter(BasePose):
                 limbs, each is a pair of joint indices.
             pose_kpt_color (np.array[Nx3]`): Color of N keypoints.
                 If None, do not draw keypoints.
-            pose_limb_color (np.array[Mx3]): Color of M limbs.
-                If None, do not draw limbs.
+            pose_link_color (np.array[Mx3]): Color of M links.
+                If None, do not draw links.
             vis_height (int): The image hight of the visualization. The width
                 will be N*vis_height depending on the number of visualized
                 items.
@@ -242,13 +242,13 @@ class PoseLifter(BasePose):
                     skeleton,
                     kpt_score_thr=0.3,
                     pose_kpt_color=pose_kpt_color,
-                    pose_limb_color=pose_limb_color,
+                    pose_link_color=pose_link_color,
                     radius=8,
                     thickness=2)
             img = mmcv.imrescale(img, scale=vis_height / img.shape[0])
 
         img_vis = imshow_keypoints_3d(result, img, skeleton, pose_kpt_color,
-                                      pose_limb_color, vis_height)
+                                      pose_link_color, vis_height)
 
         if show:
             mmcv.visualization.imshow(img_vis, win_name, wait_time)
