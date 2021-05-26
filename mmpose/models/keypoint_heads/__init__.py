@@ -10,6 +10,6 @@ from .top_down_simple_head import TopDownSimpleHead
 
 __all__ = [
     'TopDownSimpleHead', 'TopDownMultiStageHead', 'TopDownMSMUHead', 'PAFHead',
-    'PAFSimpleHead', 'BottomUpHigherResolutionHead', 'BottomUpSimpleHead', 'FcHead',
-    'TemporalRegressionHead', 'Interhand3DHead'
+    'PAFSimpleHead', 'BottomUpHigherResolutionHead', 'BottomUpSimpleHead',
+    'FcHead', 'TemporalRegressionHead', 'Interhand3DHead'
 ]
